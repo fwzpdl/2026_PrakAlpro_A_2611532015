@@ -3,26 +3,26 @@
 # Question 5
 
 # bagian A 
-# username = input("Username: ")
+username = input("Username: ")
 
-# if len(username) < 5:
-#     print("Invalid: at least 5 characters")
+if len(username) < 5:
+    print("Invalid: at least 5 characters")
 
-# elif not username.isalnum():
-#     print("Invalid: letters and digits only")
+elif not username.isalnum():
+    print("Invalid: letters and digits only")
 
-# elif not username[0].isalpha():
-#     print("Invalid: must start with a letter")
+elif not username[0].isalpha():
+    print("Invalid: must start with a letter")
 
-# else:
-#     print("Valid")
+else:
+    print("Valid")
 
 # bagian B 
 
-# nim = "261153201"
+nim = "2611532015"
 
-# if len(nim) == 10 and nim.isdigit():
-#     print(f"Valid, intake year 20{nim[:2]}")
+if len(nim) == 10 and nim.isdigit():
+    print(f"Valid, intake year 20{nim[:2]}")
 
-# else:
-#     print("Invalid NIM")
+else:
+    print("Invalid NIM")
