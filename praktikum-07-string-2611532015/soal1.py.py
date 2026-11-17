@@ -2,7 +2,7 @@
 # NIM: 2611532015
 # Question 1
 
-name = "MUHAMMAD"  # replace with your first name in capital letters
+name = "MUHAMMAD" 
 print(name[0])
 print(name[-1])
 print(name[1:4])
