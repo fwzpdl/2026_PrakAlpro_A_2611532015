@@ -1,26 +1,29 @@
-LAST_DIGIT = 5  # change to the last digit of your NIM
+LAST_DIGIT = 5
 daily_limit = 30000 + LAST_DIGIT * 1000
 expenses = []
-# Write your code below
-total = 0
-limit = 0
+
 for i in range(7):
-    expense = int(input("Enter : "))
+    expense = int(input(f"Day {i + 1}: "))
     expenses.append(expense)
 
+total = 0
+days_above_limit = 0
+
 highest = expenses[0]
+highest_day = 1
 
-for index, i in enumerate(expenses):
-    if i > daily_limit:
-        limit += 1
-    if i > highest :
-        highest = i
-        highest_output = f"Highest: day {index + 1} ({i})"
-    total += i
-    print(f"Day {index + 1}: {i}")
+for index, expense in enumerate(expenses):
+    total += expense
 
-print(f"Daily Limit: {daily_limit}")
+    if expense > daily_limit:
+        days_above_limit += 1
+
+    if expense > highest:
+        highest = expense
+        highest_day = index + 1
+
+print(f"Daily limit: {daily_limit}")
 print(f"Total: {total}")
-print(f"Average: {total/len(expenses):.1f}")
-print(f"Highest: {highest_output}")
-print(f"Days above limit: {limit}")
+print(f"Average: {total / len(expenses):.1f}")
+print(f"Highest: day {highest_day} ({highest})")
+print(f"Days above limit: {days_above_limit}")
