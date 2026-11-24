@@ -4,7 +4,7 @@ prices = [15000, 22000, 8000, 30000]
 sale_prices = prices.copy()
 for i in range(len(sale_prices)):
     sale_prices[i] = sale_prices[i] - 2000
-# Raise every normal price by 1000
+#Raise every normal price by 1000
 for price in range (len(prices)):
     prices[price] += 1000
 print("Normal:", prices)
